@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  <title>Histfaq</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{{ 'favicon.ico' }}">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="{{ 'assets/vendor/bootstrap-icons/font/bootstrap-icons.css' }}">
+  <link rel="stylesheet" href="{{ 'assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css' }}">
+  <link rel="stylesheet" href="{{ 'assets/vendor/swiper/swiper-bundle.min.css' }}">
+
+  <!-- CSS Unify Template -->
+  <link rel="stylesheet" href="{{ 'assets/css/theme.min.css' }}">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ 'assets/css/main.css' }}">
+</head>
+
+<body>
+  <!-- ========== HEADER ========== -->
+  <header id="header" class="navbar navbar-expand-lg navbar-end navbar-light navbar-absolute-top navbar-show-hide"
+          data-hs-header-options='{
+            "fixMoment": 0,
+            "fixEffect": "slide"
+          }'>
+    <div class="container-fluid bg-white">
+      <div class="container">
+        <nav class="js-mega-menu navbar-nav-wrap">
+          <!-- Default Logo -->
+          <a class="navbar-brand" href="index.html.twig" aria-label="Unify">
+            <img class="navbar-brand-logo" src="{{ 'assets/svg/logos/logo.svg' }}" alt="Image Description">
+          </a>
+          <!-- End Default Logo -->
+
+          <!-- Toggler -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-default">
+              <i class="bi-list"></i>
+            </span>
+            <span class="navbar-toggler-toggled">
+              <i class="bi-x"></i>
+            </span>
+          </button>
+          <!-- End Toggler -->
+        
+          <!-- Collapse -->
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="navbar-absolute-top-scroller">
+              <ul class="navbar-nav nav-pills">
+                <!-- Home -->
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="index.html.twig" role="button" aria-expanded="false">Головна</a>
+                </li>
+                <!-- End Home -->
+
+                <!-- Events -->
+                <li class="hs-has-mega-menu nav-item">
+                  <a class="hs-mega-menu-invoker nav-link dropdown-toggle " role="button" aria-expanded="false">Події</a>
+
+                  <!-- Mega Menu -->
+                  <div class="hs-mega-menu dropdown-menu" aria-labelledby="eventsMegaMenu">
+                    <a class="dropdown-item " href="{{ 'events.html' }}">Усі події</a>
+                    <a class="dropdown-item " href="{{ 'calendar.html' }}">Календар</a>
+                    <a class="dropdown-item " href="#">Додати подію</a>
+                  </div>
+                  <!-- End Mega Menu -->
+                </li>
+                <!-- End Events -->
+              </ul>
+            </div>
+          </div>
+          <!-- End Collapse -->
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== END HEADER ========== -->
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="content" role="main">
+    <!-- Carousel -->
+    <div class="container-fluid bg-dark mt-10 ps-0 pe-0">
+      <!-- Slider main container -->
+      <div class="swiper swiper-main">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <a href="#" class="swiper-slide slide-container">
+            <div class="image-box">
+              <img src="{{ 'assets/img/slides/slide-1.jpg' }}" class="d-block">
+            </div>
+            <div class="slide-title">
+              <h3>Чернігівський історичний фестиваль 2017. Ще якийсь короткий опис до заголовку, щоб протестувати скорочення.</h3>
+              <small><i class="bi bi-calendar4 calendar-icon"></i> 22.08.23</small>
+              <i class="bi bi-arrow-right-short slide-arrow"></i>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide slide-container">
+            <div class="image-box">
+              <img src="{{ 'assets/img/slides/slide-2.jpg' }}" class="d-block">
+            </div>
+            <div class="slide-title">
+              <h3>Чернігівський історичний фестиваль 2017. Ще якийсь короткий опис до заголовку, щоб протестувати скорочення.</h3>
+              <small><i class="bi bi-calendar4 calendar-icon"></i> 22.08.23</small>
+              <i class="bi bi-arrow-right-short slide-arrow"></i>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide slide-container">
+            <div class="image-box">
+              <img src="{{ 'assets/img/slides/slide-3.jpg' }}" class="d-block">
+            </div>
+            <div class="slide-title">
+              <h3>Чернігівський історичний фестиваль 2017. Ще якийсь короткий опис до заголовку, щоб протестувати скорочення.</h3>
+              <small><i class="bi bi-calendar4 calendar-icon"></i> 22.08.23</small>
+              <i class="bi bi-arrow-right-short slide-arrow"></i>
+            </div>
+          </a>
+          <a href="#" class="swiper-slide slide-container">
+            <div class="image-box">
+              <img src="{{ 'assets/img/slides/slide-4.jpg' }}" class="d-block">
+            </div>
+            <div class="slide-title">
+              <h3>Чернігівський історичний фестиваль 2017. Ще якийсь короткий опис до заголовку, щоб протестувати скорочення.</h3>
+              <small><i class="bi bi-calendar4 calendar-icon"></i> 22.08.23</small>
+              <i class="bi bi-arrow-right-short slide-arrow"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+      </div>
+      <div class="row text-center ms-0 me-0">
+        <div class="col-sm-6 offset-sm-3 content-space-t-3 content-space-b-3">
+          <h2 class="display-5 text-white mb-5">Все що Ви хотіли знати про культурні заходи, але не могли знайти.</h2>
+
+          <a class="btn btn-primary btn-lg" href="{{ 'events.html' }}">Переглянути всі події</a>
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Row -->
+    </div>
+
+    <!-- End Carousel -->
+
+    <!-- Features -->
+    <div class="container content-space-t-2 content-space-t-lg-3">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="feature-block">
+            <div class="feature-text">
+              <div class="mb-5">
+                <h2>Відвідувачам</h2>
+                <p>Знаходьте цікаві заходи, та відвідуйте їх самостійно, з дівчиною, з друзями, або родиною (дітьми). В деяких заходах, ви зможете, навіть, прийнати участь! Кожний захід має поле трансферу (як дістатись), а також відмітку на GoogleMaps, що дозволить спланувати маршрут</p>
+              </div>
+
+              <a class="btn btn-primary" href="{{ 'events.html' }}">Знайти події</a>
+            </div>
+            <div class="feature-image">
+              <img src="{{ 'assets/img/features-icons/event-icon.svg' }}">
+            </div>
+          </div>
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Row -->
+    </div>
+    <div class="container content-space-t-1  content-space-b-2 content-space-b-lg-3">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="feature-block">
+            <div class="feature-text">
+              <div class="mb-5">
+                <h2>Організаторам</h2>
+                <p>Якщо Ви є організатором заходу і бажаєте щоб про нього дізналось якомога більше людей - заповніть "форму" і після модерації ми опублікуємо Ваш захід.</p>
+              </div>
+
+              <a class="btn btn-primary" href="#">Створити захід</a>
+            </div>
+
+            <div class="feature-image">
+              <img src="{{ 'assets/img/features-icons/organizer-icon.svg' }}">
+            </div>
+          </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Row -->
+    </div>
+    <!-- End Features -->
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-dark">
+    <div class="container">
+      <div class="row pt-8 pb-0">
+        <div class="col-lg-8 mb-5 mb-md-0">
+          <h4 class="fw-medium text-white-70 mb-0 pb-8">
+            У Вас лишились запитання, зауваження, пропозиції?<br>
+            Напишіть нам: <span class="fw-bold text-white">support@histfaq.com</span>
+          </h4>
+        </div>
+        <div class="col-lg-4">
+          <ul class="list-unstyled list-group-horizontal d-flex justify-content-lg-end mb-0 pb-8">
+              <li class="me-5"><a class="link link-light link-light-5" href="{{ 'events.html' }}">Усі події</a></li>
+              <li class="me-5"><a class="link link-light link-light-5" href="{{ 'calendar.html' }}">Календар</a></li>
+              <li><a class="link link-light link-light-5" href="#">Додати подію</a></li>
+            </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <hr class="mt-0 mb-0 text-white text-opacity-25">
+        </div>
+      </div>
+
+      <div class="row align-items-md-center py-6">
+        <div class="col-sm-12">
+          <p class="fs-5 text-white-70 mb-0">2023 © All Rights Reserved.</p>
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Row -->
+    </div>
+  </footer>
+  <!-- ========== END FOOTER ========== -->
+
+  <!-- ========== SECONDARY CONTENTS ========== -->
+  <!-- Go To -->
+  <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;"
+     data-hs-go-to-options='{
+       "offsetTop": 700,
+       "position": {
+         "init": {
+           "right": "2rem"
+         },
+         "show": {
+           "bottom": "2rem"
+         },
+         "hide": {
+           "bottom": "-2rem"
+         }
+       }
+     }'>
+    <i class="bi-chevron-up"></i>
+  </a>
+  <!-- ========== END SECONDARY CONTENTS ========== -->
+
+  <!-- JS Global Compulsory  -->
+  <script src="{{ 'assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js' }}"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="{{ 'assets/vendor/hs-header/dist/hs-header.min.js' }}"></script>
+  <script src="{{ 'assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js' }}"></script>
+  <script src="{{ 'assets/vendor/hs-go-to/dist/hs-go-to.min.js' }}"></script>
+  <script src="{{ 'assets/vendor/swiper/swiper-bundle.min.js' }}"></script>
+
+  <!-- JS Unify -->
+  <script src="{{ 'assets/js/theme.min.js' }}"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    (function() {
+      // INITIALIZATION OF NAVBAR
+      // =======================================================
+      new HSHeader('#header').init()
+
+
+      // INITIALIZATION OF MEGA MENU
+      // =======================================================
+      const megaMenu = new HSMegaMenu('.js-mega-menu', {
+        desktop: {
+          position: 'left'
+        }
+      })
+
+
+      // INITIALIZATION OF GO TO
+      // =======================================================
+      new HSGoTo('.js-go-to')
+
+
+      // INITIALIZATION OF SWIPER
+      // =======================================================
+      var swiper = new Swiper('.swiper-main',{
+        slidesPerView: 3,
+        loop:true,
+        autoplay: true,
+        breakpoints: {
+          240: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 0,
+          },
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+          },
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+
+      console.log(swiper);
+    })();
+  </script>
+</body>
+</html>
