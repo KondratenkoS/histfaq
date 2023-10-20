@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: docker/server/Dockerfile
+    ports:
+      - '8056:80'
+    volumes:
+      - ./:/var/www/app
+      - ./docker/server/sites-enabled:/etc/apache2/sites-enabled
+    depends_on:
+      - db
+    working_dir: /var/www/app
+
+  db:
+    image: mariadb:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: mariadb
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./data/db:/var/lib/mysql
+      - ./data/log:/var/log/mysql
+    ports:
+      - '3307:3306'
