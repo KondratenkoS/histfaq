@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  <title>Histfaq</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{{ 'favicon.ico' }}">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="{{ 'assets/vendor/bootstrap-icons/font/bootstrap-icons.css' }}">
+  <link rel="stylesheet" href="{{ 'assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css' }}">
+  <link rel="stylesheet" href="{{ 'assets/vendor/swiper/swiper-bundle.min.css' }}">
+
+  <!-- CSS Unify Template -->
+  <link rel="stylesheet" href="{{ 'assets/css/theme.min.css' }}">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ 'assets/css/main.css' }}">
+
+  <!-- Full Calendar -->
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js'></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth',
+          firstDay: 1,
+          locale: 'uk',
+          buttonText: {
+              today: 'Сьогодні'
+          },
+        });
+        calendar.render();
+      });
+
+    </script>
+</head>
+
+<body>
+  <!-- ========== HEADER ========== -->
+  <header id="header" class="navbar navbar-expand-lg navbar-end navbar-light navbar-absolute-top navbar-show-hide"
+          data-hs-header-options='{
+            "fixMoment": 0,
+            "fixEffect": "slide"
+          }'>
+    <div class="container-fluid bg-white">
+      <div class="container">
+        <nav class="js-mega-menu navbar-nav-wrap">
+          <!-- Default Logo -->
+          <a class="navbar-brand" href="{{ 'index.html' }}" aria-label="Unify">
+            <img class="navbar-brand-logo" src="{{ 'assets/svg/logos/logo.svg' }}" alt="Image Description">
+          </a>
+          <!-- End Default Logo -->
+
+          <!-- Toggler -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-default">
+              <i class="bi-list"></i>
+            </span>
+            <span class="navbar-toggler-toggled">
+              <i class="bi-x"></i>
+            </span>
+          </button>
+          <!-- End Toggler -->
+        
+          <!-- Collapse -->
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="navbar-absolute-top-scroller">
+              <ul class="navbar-nav nav-pills">
+                <!-- Home -->
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="{{ 'index.html' }}" role="button" aria-expanded="false">Головна</a>
+                </li>
+                <!-- End Home -->
+
+                <!-- Events -->
+                <li class="hs-has-mega-menu nav-item">
+                  <a class="hs-mega-menu-invoker nav-link dropdown-toggle " role="button" aria-expanded="false">Події</a>
+
+                  <!-- Mega Menu -->
+                  <div class="hs-mega-menu dropdown-menu" aria-labelledby="eventsMegaMenu">
+                    <a class="dropdown-item " href="{{ 'events.html' }}">Усі події</a>
+                    <a class="dropdown-item " href="{{ 'calendar.html' }}">Календар</a>
+                    <a class="dropdown-item " href="#">Додати подію</a>
+                  </div>
+                  <!-- End Mega Menu -->
+                </li>
+                <!-- End Events -->
+              </ul>
+            </div>
+          </div>
+          <!-- End Collapse -->
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== END HEADER ========== -->
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="content" role="main">
+    <!-- Breadcrumb -->
+    <div class="container-fluid bg-light mt-10">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mt-3">
+                <li class="breadcrumb-item"><a href="{{ 'index.html' }}">Головна</a></li>
+                <li class="breadcrumb-item text-black-50 active" aria-current="page">Календар</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Calendar -->
+    <div class="container content-space-t-2">
+      <div class="row">
+        <div class="col-lg-12">
+          <div id='calendar'></div>
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Row -->
+    </div>
+    <!-- End Calendar -->
+    <div class="container content-space-b-1 content-space-b-lg-2">
+      <div class="row seo-text">
+
+        <hr class="my-10">
+        
+        <div class="col-md-12 mb-10 mb-lg-0 text-center">
+          <p class="text-muted"><small>Запрошуємо всіх, хто цікавиться історією України, на наш сайт, де ви зможете ознайомитися з реконструкціями історичних подій, які відбуваються на території країни. У нас ви знайдете багато цікавої та корисної інформації про події, які можна відвідати, а також зможете записатися на участь у цих заходах. <span class="collapse" id="collapseExample">Якщо ви мрієте про власну реконструкцію, то наш сайт надає можливість організувати свою власну подію. Приєднуйтесь до нашої спільноти людей, які цінують історію України і хочуть відродити давні традиції та звичаї!</span></small></p>
+          <a
+            data-bs-toggle="collapse"
+            href="#collapseExample"
+            role="button"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+            class="collapse-btn collapsed">
+            <span class="show-more-text">Розгорнути</span>
+            <span class="hide-more-text">Сховати</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-dark">
+    <div class="container">
+      <div class="row pt-8 pb-0">
+        <div class="col-lg-8 mb-5 mb-md-0">
+          <h4 class="fw-medium text-white-70 mb-0 pb-8">
+            У Вас лишились запитання, зауваження, пропозиції?<br>
+            Напишіть нам: <span class="fw-bold text-white">support@histfaq.com</span>
+          </h4>
+        </div>
+        <div class="col-lg-4">
+          <ul class="list-unstyled list-group-horizontal d-flex justify-content-lg-end mb-0 pb-8">
+              <li class="me-5"><a class="link link-light link-light-5" href="{{ 'events.html' }}">Усі події</a></li>
+              <li class="me-5"><a class="link link-light link-light-5" href="{{ 'calendar.html' }}">Календар</a></li>
+              <li><a class="link link-light link-light-5" href="#">Додати подію</a></li>
+            </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <hr class="mt-0 mb-0 text-white text-opacity-25">
+        </div>
+      </div>
+
+      <div class="row align-items-md-center py-6">
+        <div class="col-sm-12">
+          <p class="fs-5 text-white-70 mb-0">2023 © All Rights Reserved.</p>
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Row -->
+    </div>
+  </footer>
+  <!-- ========== END FOOTER ========== -->
+
+  <!-- ========== SECONDARY CONTENTS ========== -->
+  <!-- Go To -->
+  <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;"
+     data-hs-go-to-options='{
+       "offsetTop": 700,
+       "position": {
+         "init": {
+           "right": "2rem"
+         },
+         "show": {
+           "bottom": "2rem"
+         },
+         "hide": {
+           "bottom": "-2rem"
+         }
+       }
+     }'>
+    <i class="bi-chevron-up"></i>
+  </a>
+  <!-- ========== END SECONDARY CONTENTS ========== -->
+
+  <!-- JS Global Compulsory  -->
+  <script src="{{ 'assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js' }}"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="{{ 'assets/vendor/hs-header/dist/hs-header.min.js' }}"></script>
+  <script src="{{ 'assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js' }}"></script>
+  <script src="{{ 'assets/vendor/hs-go-to/dist/hs-go-to.min.js' }}"></script>
+  <script src="{{ 'assets/vendor/swiper/swiper-bundle.min.js' }}"></script>
+
+  <!-- JS Unify -->
+  <script src="{{ 'assets/js/theme.min.js' }}"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    (function() {
+      // INITIALIZATION OF NAVBAR
+      // =======================================================
+      new HSHeader('#header').init()
+
+
+      // INITIALIZATION OF MEGA MENU
+      // =======================================================
+      const megaMenu = new HSMegaMenu('.js-mega-menu', {
+        desktop: {
+          position: 'left'
+        }
+      })
+
+
+      // INITIALIZATION OF GO TO
+      // =======================================================
+      new HSGoTo('.js-go-to')
+
+
+      // INITIALIZATION OF SWIPER
+      // =======================================================
+      var swiper = new Swiper('.swiper-main',{
+        slidesPerView: 3,
+        loop:true,
+        autoplay: true,
+        breakpoints: {
+          240: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+          380: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 0,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+          },
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+
+      console.log(swiper);
+    })();
+  </script>
+</body>
+</html>
