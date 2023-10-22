@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required Meta Tags Always Come First -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Title -->
+  <title>Histfaq - Events</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{{ '/favicon.ico' }}">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- CSS Implementing Plugins -->
+  <link rel="stylesheet" href="{{ '/assets/vendor/bootstrap-icons/font/bootstrap-icons.css' }}">
+  <link rel="stylesheet" href="{{ '/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.css' }}">
+  <link rel="stylesheet" href="{{ '/assets/vendor/swiper/swiper-bundle.min.css' }}">
+
+  <!-- CSS Unify Template -->
+  <link rel="stylesheet" href="{{ '/assets/css/theme.min.css' }}">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' }}">
+</head>
+
+<body>
+  <!-- ========== HEADER ========== -->
+  <header id="header" class="navbar navbar-expand-lg navbar-end navbar-light navbar-absolute-top navbar-show-hide"
+          data-hs-header-options='{
+            "fixMoment": 0,
+            "fixEffect": "slide"
+          }'>
+    <div class="container-fluid bg-white">
+      <div class="container">
+        <nav class="js-mega-menu navbar-nav-wrap">
+          <!-- Default Logo -->
+          <a class="navbar-brand" href="{{ 'index.html' }}" aria-label="Unify">
+            <img class="navbar-brand-logo" src="{{ '/assets/svg/logos/logo.svg' }}" alt="Image Description">
+          </a>
+          <!-- End Default Logo -->
+
+          <!-- Toggler -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-default">
+              <i class="bi-list"></i>
+            </span>
+            <span class="navbar-toggler-toggled">
+              <i class="bi-x"></i>
+            </span>
+          </button>
+          <!-- End Toggler -->
+        
+          <!-- Collapse -->
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="navbar-absolute-top-scroller">
+              <ul class="navbar-nav nav-pills">
+                <!-- Home -->
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="{{ 'index.html' }}" role="button" aria-expanded="false">Головна</a>
+                </li>
+                <!-- End Home -->
+
+                <!-- Events -->
+                <li class="hs-has-mega-menu nav-item">
+                  <a class="hs-mega-menu-invoker nav-link dropdown-toggle " role="button" aria-expanded="false">Події</a>
+
+                  <!-- Mega Menu -->
+                  <div class="hs-mega-menu dropdown-menu" aria-labelledby="eventsMegaMenu">
+                    <a class="dropdown-item " href="{{ 'events.html' }}">Усі події</a>
+                    <a class="dropdown-item " href="{{ 'calendar.html' }}">Календар</a>
+                    <a class="dropdown-item " href="#">Додати подію</a>
+                  </div>
+                  <!-- End Mega Menu -->
+                </li>
+                <!-- End Events -->
+              </ul>
+            </div>
+          </div>
+          <!-- End Collapse -->
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== END HEADER ========== -->
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="content" role="main">
+    <!-- Breadcrumb -->
+    <div class="container-fluid bg-light mt-10">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mt-3">
+                <li class="breadcrumb-item"><a href="{{ 'index.html' }}">Головна</a></li>
+                <li class="breadcrumb-item"><a href="{{ 'events.html' }}">Усі події</a></li>
+                <li class="breadcrumb-item text-black-50 active" aria-current="page">Чернігівський історичний фестиваль на тему "Українська держава XVII століття</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex bg-img-center position-relative event-preview-block" style="background-image: url({{ '/assets/img/event-previews/event-preview-bg.jpg' }});">
+      <div class="container d-flex justify-content-end flex-column min-vh-lg-75 content-space-1 content-space-lg-b-3 zi-2">
+        <h1 class="display-4 text-white">Чернігівський історичний фестиваль на тему "Українська держава XVII століття".</h1>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container content-space-1 content-space-b-lg-3">
+
+      <div class="row">
+        <div class="col-lg-4 order-lg-2 mb-5 mb-lg-0">
+          <div id="stickyBlockStartPoint">
+            <!-- Card -->
+            <div class="js-sticky-block card card-borderless bg-soft-dark"
+                data-hs-sticky-block-options='{
+                 "parentSelector": "#stickyBlockStartPoint",
+                 "targetSelector": "#header",
+                 "breakpoint": "lg",
+                 "startPoint": "#stickyBlockStartPoint",
+                 "endPoint": "#stickyBlockEndPoint",
+                 "stickyOffsetTop": 70
+               }'>
+              <div class="card-body">
+                <dl>
+                  <dt>Статус події:</dt>
+                  <dd><i class="bi bi-circle-fill text-primary"></i> Активна</dd>
+                  <dt>Початок:</dt>
+                  <dd>22 травня, 2017</dd>
+                  <dt>Закінчення:</dt>
+                  <dd>26 травня, 2017</dd>
+                  <dt>Жанр:</dt>
+                  <dd>XVII століття</dd>
+                  <dt>Організатор:</dt>
+                  <dd>ГО ""Клуб історичної реконструкції ""Оствиця""</dd>
+                  <dt>Місце проведення:</dt>
+                  <dd>Чернігів, Ялівщина</dd>
+                  <dt>Внески для учасників:</dt>
+                  <dd>300 грн</dd>
+                  <dt>Внески для гостей:</dt>
+                  <dd>Безкоштовно</dd>
+                </dl>
+              </div>
+            </div>
+            <!-- End Card -->
+          </div>
+        </div>
+        <!-- End Col -->
+
+        <div class="col-lg-8">
+          <div class="mb-7">
+            <h2>Опис</h2>
+
+            <p>Запрошуємо всією родиною завітати на історико-культурний фестиваль «Погорина. Урочище Чадорож-2020» та перенестися з нами в часи Київської Русі. До Хотина з'їдуться фахівці військово-історичної реконструкції з усієї України, що створять відповідну атмосферу фестивалю.</p>
+ 
+            <p>ВХІД ВІЛЬНИЙ</p>
+
+            <ul class="list-pointer list-pointer-sm list-pointer-soft-bg-primary">
+              <li class="list-pointer-item">покататися на прадавніх човнах;</li>
+              <li class="list-pointer-item">оглядові підйоми на повітряній кулі;</li>
+              <li class="list-pointer-item">спробуєте стрільбу з лука (особливо цікаво для дітей);</li>
+              <li class="list-pointer-item">роздивитеся ближче побут та речі жителів городищ;</li>
+              <li class="list-pointer-item">побудете в образі воїна з мечем та щитом;</li>
+              <li class="list-pointer-item">майстер-клас з виготовлення човна-довбанки;</li>
+              <li class="list-pointer-item">взяти участь в історичних іграх та забавах;</li>
+              <li class="list-pointer-item">будемо танцювати та співати під гурт «Бурдони Черна» (м.Чернівці) та ще багато-багато цікавого.</li>
+            </ul>
+
+            <p>Фестиваль живої історії відбуватиметься на свіжому повітрі на березі річки Горинь (острів фестів, с. Хотин, Рівненського р-ну, Рівненської обл.). Сімейний формат, без алкоголю, з розвагами для дітей.</p>
+          </div>
+
+          <div class="mb-7">
+            <h2>Як дістатись</h2>
+
+            <p>Графік маршрутного таксі від залізничного вокзалу:</p>
+
+            <ul class="list-pointer list-pointer-sm list-pointer-soft-bg-primary">
+              <li class="list-pointer-item">РІВНЕ-ХОТИН (ч/з ОБАРІВ) 7.15, 9.00, 12.35, 14.50, 16.40, 18.35.</li>
+              <li class="list-pointer-item">РІВНЕ-ХОТИН (ч/з ОЛЕКСИН) 9.30, 11.45, 13.10, 17.40, 19.15.</li>
+            </ul>
+          </div>
+
+          <div class="mb-7">
+            <h2>Додаткова інформація</h2>
+
+            <h4>Для довідок:</h4>
+
+            <p>
+              Історико-культурний фестиваль «Погорина. Урочище Чадорож-2020» за підтримки Шпанівської ОТГ в особі Столярчука Миколи Анатолійовича.<br>
+              Організатори ГО ""Клуб історичної реконструкції ""Оствиця""<br>
+              ???? 096-0301300
+            </p>
+
+            <h4>Інформація для учасників - реконструкторів:</h4>
+
+            <p>
+              25 вересня (п’ятниця) - Заїзд човнів та учасників<br>
+              26 вересня (субота)<br>
+              6.30 - 10.00 - похід для реконструкторів на човнах: Хугін, Лада, Уборть, Сілк по річці Горинь<br>
+              12.00 - Початок фестивалю<br>
+              17.00 - Закінчення фестивалю<br>
+              Телефон 066 752 5351, 067 36 000 39
+            </p>
+          </div>
+
+          <div class="mb-7">
+            <div style="height: 200px; background: #ededed; justify-content: center; display: flex; align-items: center;">
+              Тут буде мапа
+            </div>
+          </div>
+
+          <div>
+            <a class="btn btn-primary" href="{{ 'page-careers-apply.html' }}">Прийняти участь</a>
+          </div>
+
+          <!-- End Sticky End Point -->
+          <div id="stickyBlockEndPoint"></div>
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Row -->
+
+      <hr class="my-10">
+
+      <div class="w-lg-65">
+        <a class="btn btn-white btn-sm m-1" href="#">Інші події у Чернігівський області</a>
+        <a class="btn btn-white btn-sm m-1" href="#">Більше фестивалів</a>
+        <a class="btn btn-white btn-sm m-1" href="#">Усі події в цей час</a>
+      </div>
+    </div>
+    <!-- End Content -->
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-dark">
+    <div class="container">
+      <div class="row pt-8 pb-0">
+        <div class="col-lg-8 mb-5 mb-md-0">
+          <h4 class="fw-medium text-white-70 mb-0 pb-8">
+            У Вас лишились запитання, зауваження, пропозиції?<br>
+            Напишіть нам: <span class="fw-bold text-white">support@histfaq.com</span>
+          </h4>
+        </div>
+        <div class="col-lg-4">
+          <ul class="list-unstyled list-group-horizontal d-flex justify-content-lg-end mb-0 pb-8">
+              <li class="me-5"><a class="link link-light link-light-5" href="{{ 'events.html' }}">Усі події</a></li>
+              <li class="me-5"><a class="link link-light link-light-5" href="{{ 'calendar.html' }}">Календар</a></li>
+              <li><a class="link link-light link-light-5" href="#">Додати подію</a></li>
+            </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <hr class="mt-0 mb-0 text-white text-opacity-25">
+        </div>
+      </div>
+
+      <div class="row align-items-md-center py-6">
+        <div class="col-sm-12">
+          <p class="fs-5 text-white-70 mb-0">2023 © All Rights Reserved.</p>
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Row -->
+    </div>
+  </footer>
+  <!-- ========== END FOOTER ========== -->
+
+  <!-- ========== SECONDARY CONTENTS ========== -->
+  <!-- Go To -->
+  <a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;"
+     data-hs-go-to-options='{
+       "offsetTop": 700,
+       "position": {
+         "init": {
+           "right": "2rem"
+         },
+         "show": {
+           "bottom": "2rem"
+         },
+         "hide": {
+           "bottom": "-2rem"
+         }
+       }
+     }'>
+    <i class="bi-chevron-up"></i>
+  </a>
+  <!-- ========== END SECONDARY CONTENTS ========== -->
+
+  <!-- JS Global Compulsory  -->
+  <script src="{{ '/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js' }}"></script>
+
+  <!-- JS Implementing Plugins -->
+  <script src="{{ '/assets/vendor/hs-header/dist/hs-header.min.js' }}"></script>
+  <script src="{{ '/assets/vendor/hs-mega-menu/dist/hs-mega-menu.min.js' }}"></script>
+  <script src="{{ '/assets/vendor/hs-go-to/dist/hs-go-to.min.js' }}"></script>
+  <script src="{{ '/assets/vendor/hs-sticky-block/dist/hs-sticky-block.min.js' }}"></script>
+
+  <!-- JS Unify -->
+  <script src="{{ '/assets/js/theme.min.js' }}"></script>
+
+  <!-- JS Plugins Init. -->
+  <script>
+    (function() {
+      // INITIALIZATION OF NAVBAR
+      // =======================================================
+      new HSHeader('#header').init()
+
+
+      // INITIALIZATION OF MEGA MENU
+      // =======================================================
+      const megaMenu = new HSMegaMenu('.js-mega-menu', {
+        desktop: {
+          position: 'left'
+        }
+      })
+
+
+      // INITIALIZATION OF GO TO
+      // =======================================================
+      new HSGoTo('.js-go-to')
+
+
+      // INITIALIZATION OF STICKY BLOCKS
+      // =======================================================
+       new HSStickyBlock('.js-sticky-block', {
+        targetSelector: document.getElementById('header').classList.contains('navbar-fixed') ? '#header' : null
+      })
+    })()
+  </script>
+</body>
+</html>
