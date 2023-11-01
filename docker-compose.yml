@@ -11,17 +11,32 @@ services:
       - ./:/var/www/app
       - ./docker/server/sites-enabled:/etc/apache2/sites-enabled
     depends_on:
-      - db
+      - mariadb
+    networks:
+      - internal
     working_dir: /var/www/app
 
-  db:
-    image: mariadb:latest
-    restart: always
+  mariadb:
+    container_name: histfaqt-mariadb
+    image: mariadb
+    restart: on-failure
+    ports:
+      - "3307:3306"
     environment:
-      MYSQL_DATABASE: mariadb
+      MYSQL_DATABASE: histfaqt
+      MYSQL_USER: mariadb
+      MYSQL_PASSWORD: mariadb
       MYSQL_ROOT_PASSWORD: root
     volumes:
       - ./data/db:/var/lib/mysql
       - ./data/log:/var/log/mysql
-    ports:
-      - '3307:3306'
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.111.1/28
