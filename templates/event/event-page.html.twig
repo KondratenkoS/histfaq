@@ -102,7 +102,7 @@
               <ol class="breadcrumb mt-3">
                 <li class="breadcrumb-item"><a href="{{ 'index.html' }}">Головна</a></li>
                 <li class="breadcrumb-item"><a href="{{ 'events.html' }}">Усі події</a></li>
-                <li class="breadcrumb-item text-black-50 active" aria-current="page">{{ event.event }}</li>
+                <li class="breadcrumb-item text-black-50 active" aria-current="page">{{ event.title }}</li>
               </ol>
             </nav>
           </div>
@@ -112,7 +112,7 @@
 
     <div class="d-flex bg-img-center position-relative event-preview-block" style="background-image: url({{ '/assets/img/event-previews/event-preview-bg.jpg' }});">
       <div class="container d-flex justify-content-end flex-column min-vh-lg-75 content-space-1 content-space-lg-b-3 zi-2">
-        <h1 class="display-4 text-white">{{ event.event }}</h1>
+        <h1 class="display-4 text-white">{{ event.title }}</h1>
       </div>
     </div>
 
@@ -162,7 +162,7 @@
           <div class="mb-7">
             <h2>Опис</h2>
 
-            <p>{{ event.description }}</p>
+            <p>{{ event.text }}</p>
  
             <p>ВХІД ВІЛЬНИЙ</p>
 
