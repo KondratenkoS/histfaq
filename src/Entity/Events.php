@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\EventsRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: EventsRepository::class)]
@@ -16,7 +17,7 @@ class Events
     #[ORM\Column(length: 255)]
     private ?string $title = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(type: Types::TEXT)]
     private ?string $text = null;
 
     public function getId(): ?int
