@@ -11,10 +11,10 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class EventController extends AbstractController
 {
-    #[Route('/event/{id}', name: 'event', requirements: ['id' => '[1-9+]*'])]
-    public function index(int $id, EventsRepository $eventRepository): Response
+    #[Route('/event/{slug}', name: 'event')]
+    public function index(string $slug, EventsRepository $eventRepository): Response
     {
-        $event = $eventRepository->find($id);
+        $event = $eventRepository->findOneBy(['slug' => $slug]);
         dump($event);
         return $this->render('event/event-page.html.twig', ['event' => $event]);
     }

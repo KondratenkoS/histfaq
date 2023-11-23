@@ -4,10 +4,15 @@ RUN apt-get update -qq \
     && apt-get install -qy --no-install-recommends \
         git \
         zip \
-        unzip
+        unzip \
+        libicu-dev
 
-# mysql
-RUN docker-php-ext-install pdo_mysql
+
+
+
+RUN docker-php-ext-install pdo_mysql \
+    intl
+
 
 # Install composer
 ENV COMPOSER_ALLOW_SUPERUSER 1
