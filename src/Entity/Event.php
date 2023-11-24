@@ -2,15 +2,16 @@
 
 namespace App\Entity;
 
-use App\Repository\EventsRepository;
+use App\Repository\EventRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
-#[ORM\Entity(repositoryClass: EventsRepository::class)]
+#[ORM\Entity(repositoryClass: EventRepository::class)]
+#[ORM\HasLifecycleCallbacks]
 #[UniqueEntity('slug')]
-class Events
+class Event
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -21,10 +22,16 @@ class Events
     private ?string $title = null;
 
     #[ORM\Column(type: Types::TEXT)]
-    private ?string $text = null;
+    private string $text;
 
     #[ORM\Column(length: 255, unique: true)]
     private ?string $slug = null;
+
+    #[ORM\Column]
+    private ?\DateTimeImmutable $createdAt = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?\DateTimeImmutable $updatedAt = null;
 
     public function getId(): ?int
     {
@@ -43,7 +50,7 @@ class Events
         return $this;
     }
 
-    public function getText(): ?string
+    public function getText(): string
     {
         return $this->text;
     }
@@ -74,5 +81,41 @@ class Events
 //        if (!$this->slug || '-' === $this->slug) {
 
 //        }
+    }
+
+    public function getCreatedAt(): ?\DateTimeImmutable
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeImmutable $createdAt): static
+    {
+        $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeImmutable
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(?\DateTimeImmutable $updatedAt): static
+    {
+        $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    #[ORM\PrePersist]
+    public function setCreatedAtValue(): void
+    {
+        $this->createdAt = new \DateTimeImmutable();
+    }
+
+    #[ORM\PreUpdate]
+    public function setUpdatedAtValue(): void
+    {
+        $this->updatedAt = new \DateTimeImmutable();
     }
 }

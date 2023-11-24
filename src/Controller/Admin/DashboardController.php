@@ -2,7 +2,7 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Events;
+use App\Entity\Event;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -16,7 +16,7 @@ class DashboardController extends AbstractDashboardController
     public function index(): Response
     {
         $routeBuilder = $this->container->get(AdminUrlGenerator::class);
-        $url = $routeBuilder->setController(EventsCrudController::class)->generateUrl();
+        $url = $routeBuilder->setController(EventCrudController::class)->generateUrl();
 
         return $this->redirect($url);
     }
@@ -30,6 +30,6 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         yield MenuItem::linktoRoute('Back to the website', 'fas fa-home', 'homepage');
-        yield MenuItem::linkToCrud('Events', 'fas fa-map-marker-alt', Events::class);
+        yield MenuItem::linkToCrud('Event', 'fas fa-map-marker-alt', Event::class);
     }
 }
