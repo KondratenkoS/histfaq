@@ -2,27 +2,27 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Event;
 use App\Entity\EventImage;
-use App\Form\Type\EventImageType;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
-use EasyCorp\Bundle\EasyAdminBundle\Field\CollectionField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
-class EventCrudController extends AbstractCrudController
+class EventImageCrudController extends AbstractCrudController
 {
     public static function getEntityFqcn(): string
     {
-        return Event::class;
+        return EventImage::class;
     }
 
+    /*
     public function configureFields(string $pageName): iterable
     {
-        yield TextField::new('title');
-        yield TextEditorField::new('text');
-        yield CollectionField::new('images')
-            ->setEntryType(EventImageType::class)
-        ;
+        return [
+            IdField::new('id'),
+            TextField::new('title'),
+            TextEditorField::new('description'),
+        ];
     }
+    */
 }

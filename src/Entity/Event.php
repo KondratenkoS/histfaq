@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\EventRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -32,6 +34,14 @@ class Event
 
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $updatedAt = null;
+
+    #[ORM\OneToMany(mappedBy: 'event', targetEntity: EventImage::class, cascade: ['persist'], orphanRemoval: true)]
+    private Collection $images;
+
+    public function __construct()
+    {
+        $this->images = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -117,5 +127,35 @@ class Event
     public function setUpdatedAtValue(): void
     {
         $this->updatedAt = new \DateTimeImmutable();
+    }
+
+    /**
+     * @return Collection<int, EventImage>
+     */
+    public function getImages(): Collection
+    {
+        return $this->images;
+    }
+
+    public function addImage(EventImage $eventImage): static
+    {
+        if (!$this->images->contains($eventImage)) {
+            $this->images->add($eventImage);
+            $eventImage->setEvent($this);
+        }
+
+        return $this;
+    }
+
+    public function removeImage(EventImage $eventImage): static
+    {
+        if ($this->images->removeElement($eventImage)) {
+            // set the owning side to null (unless already changed)
+            if ($eventImage->getEvent() === $this) {
+                $eventImage->setEvent(null);
+            }
+        }
+
+        return $this;
     }
 }
