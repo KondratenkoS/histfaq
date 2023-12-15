@@ -13,7 +13,6 @@ class EventImageType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('name')
             ->add('file', VichImageType::class, [
                     'label' => 'Image']);
     }

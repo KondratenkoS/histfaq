@@ -58,7 +58,7 @@ class EventImage
         return $this->name;
     }
 
-    public function setName(string $name): static
+    public function setName(string $name = null): self
     {
         $this->name = $name;
 
@@ -70,7 +70,7 @@ class EventImage
         return $this->size;
     }
 
-    public function setSize(int $size): static
+    public function setSize(int $size = null): self
     {
         $this->size = $size;
 

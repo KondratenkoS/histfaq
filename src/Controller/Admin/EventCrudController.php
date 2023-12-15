@@ -3,7 +3,6 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Event;
-use App\Entity\EventImage;
 use App\Form\Type\EventImageType;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\CollectionField;
