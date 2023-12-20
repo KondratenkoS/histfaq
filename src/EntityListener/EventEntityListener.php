@@ -13,16 +13,16 @@ use Symfony\Component\String\Slugger\SluggerInterface;
 class EventEntityListener
 {
     public function __construct(
-        private SluggerInterface $slugger,
+        private readonly SluggerInterface $slugger,
     ) {
     }
 
-    public function prePersist(Event $events, LifecycleEventArgs $event)
+    public function prePersist(Event $events, LifecycleEventArgs $event): void
     {
         $events->computeSlug($this->slugger);
     }
 
-    public function preUpdate(Event $events, LifecycleEventArgs $event)
+    public function preUpdate(Event $events, LifecycleEventArgs $event): void
     {
         $events->computeSlug($this->slugger);
     }

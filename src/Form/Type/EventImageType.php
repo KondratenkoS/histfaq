@@ -7,6 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Vich\UploaderBundle\Form\Type\VichImageType;
+use Symfony\Component\Validator\Constraints\File;
 
 class EventImageType extends AbstractType
 {
@@ -14,7 +15,17 @@ class EventImageType extends AbstractType
     {
         $builder
             ->add('file', VichImageType::class, [
-                    'label' => 'Image']);
+                'label' => 'Image',
+                'required' => false,
+                'constraints' => [
+                    new File([
+                        'mimeTypes' => 'image/jpeg',
+                        'maxSize' => '5m',
+                        'mimeTypesMessage' => 'Please upload a valid JPG(JEPG) document',
+                    ])
+                ]
+            ])
+        ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void

@@ -18,7 +18,9 @@ class EventCrudController extends AbstractCrudController
 
     public function configureFields(string $pageName): iterable
     {
-        yield TextField::new('title');
+        yield TextField::new('title')
+            ->renderAsHtml()
+        ;
         yield TextEditorField::new('text');
         yield CollectionField::new('images')
             ->setEntryType(EventImageType::class)

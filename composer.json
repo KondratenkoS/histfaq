@@ -10,6 +10,7 @@
     "ext-ctype": "*",
     "ext-iconv": "*",
     "ext-intl": "*",
+    "doctrine/annotations": "^2.0",
     "doctrine/doctrine-bundle": "^2.10",
     "doctrine/doctrine-migrations-bundle": "^3.2",
     "doctrine/orm": "^2.16",
@@ -21,6 +22,7 @@
     "symfony/runtime": "6.3.*",
     "symfony/security-bundle": "6.3.*",
     "symfony/twig-bundle": "6.3.*",
+    "symfony/validator": "6.3.*",
     "symfony/yaml": "6.3.*",
     "vich/uploader-bundle": "^2.2"
   },

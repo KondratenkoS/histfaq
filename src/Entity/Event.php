@@ -2,13 +2,15 @@
 
 namespace App\Entity;
 
-use App\Repository\EventRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use App\Repository\EventRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\String\Slugger\SluggerInterface;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+
 
 #[ORM\Entity(repositoryClass: EventRepository::class)]
 #[ORM\HasLifecycleCallbacks]
@@ -20,6 +22,8 @@ class Event
     #[ORM\Column]
     private ?int $id = null;
 
+    #[Assert\NotBlank]
+    #[Assert\Length(min: 5)]
     #[ORM\Column(length: 255)]
     private ?string $title = null;
 
@@ -83,14 +87,10 @@ class Event
         return $this;
     }
 
-    public function computeSlug(SluggerInterface $slugger)
+    public function computeSlug(SluggerInterface $slugger): void
     {
         $slug = (string) $slugger->slug($this->getTitle(), '_')->lower();
         $this->setSlug($slug);
-
-//        if (!$this->slug || '-' === $this->slug) {
-
-//        }
     }
 
     public function getCreatedAt(): ?\DateTimeImmutable

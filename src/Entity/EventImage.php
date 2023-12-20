@@ -16,7 +16,11 @@ class EventImage
     #[ORM\Column]
     private ?int $id = null;
 
-    #[Vich\UploadableField(mapping: 'images', fileNameProperty: 'name', size: 'size')]
+
+    #[Vich\UploadableField(mapping: 'images',
+        fileNameProperty: 'name',
+        size: 'size'
+    )]
     private ?File $file = null;
 
     #[ORM\Column(length: 255)]
@@ -58,7 +62,7 @@ class EventImage
         return $this->name;
     }
 
-    public function setName(string $name = null): self
+    public function setName(?string $name): self
     {
         $this->name = $name;
 
@@ -70,7 +74,7 @@ class EventImage
         return $this->size;
     }
 
-    public function setSize(int $size = null): self
+    public function setSize(?int $size): self
     {
         $this->size = $size;
 
@@ -103,6 +107,6 @@ class EventImage
 
     public function __toString(): string
     {
-        return $this->name;
+        return (string) $this->name;
     }
 }
