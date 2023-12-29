@@ -19,9 +19,9 @@ class EventImageType extends AbstractType
                 'required' => false,
                 'constraints' => [
                     new File([
+                        'maxSize' => '5M',
                         'mimeTypes' => 'image/jpeg',
-                        'maxSize' => '5m',
-                        'mimeTypesMessage' => 'Please upload a valid JPG(JEPG) document',
+                        'mimeTypesMessage' => 'Please upload a valid JPG document',
                     ])
                 ]
             ])

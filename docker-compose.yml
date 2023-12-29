@@ -10,6 +10,7 @@ services:
     volumes:
       - ./:/var/www/app
       - ./docker/server/sites-enabled:/etc/apache2/sites-enabled
+      - ./docker/server/php.ini:/usr/local/etc/php/conf.d/php.ini
     depends_on:
       - mariadb
     networks:
