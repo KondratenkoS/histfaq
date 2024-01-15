@@ -21,7 +21,7 @@ class EventImageType extends AbstractType
                     new File([
                         'maxSize' => '5M',
                         'mimeTypes' => 'image/jpeg',
-                        'mimeTypesMessage' => 'Please upload a valid JPG document',
+                        'mimeTypesMessage' => 'Invalid format, please use JPG(JPEG).',
                     ])
                 ]
             ])
