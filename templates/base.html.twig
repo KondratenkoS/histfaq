@@ -9,12 +9,7 @@
 
         {% block stylesheets %}
 
-            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-            <link rel="shortcut icon" href="{{ '/favicon.ico' }}">
-            <link rel="stylesheet" href="{{ '/assets/vendor/bootstrap-icons/font/bootstrap-icons.css' }}">
-            <link rel="stylesheet" href="{{ '/assets/vendor/swiper/swiper-bundle.min.css' }}">
-            <link rel="stylesheet" href="{{ '/assets/css/theme.min.css' }}">
-            <link rel="stylesheet" href="{{ '/assets/css/style.css' }}">
+            <link rel="stylesheet" href="{{ 'assets/css/theme.min.css' }}">
 
         {% endblock %}
     {% endblock head %}
@@ -22,70 +17,14 @@
 <body>
 {% block body %}
     <main>
-        {% include 'partial/header.html.twig' %}
 
         {% block content%}{% endblock %}
 
-        {% include 'partial/footer.html.twig' %}
-
-        <a class="js-go-to go-to position-fixed rounded-circle" href="javascript:;" style="visibility: hidden; background-color: #fefefe"
-           data-hs-go-to-options='{
-               "offsetTop": 450,
-               "position": {
-               "init": {
-               "right": "1rem"
-               },
-               "show": {
-               "bottom": "1rem"
-               },
-               "hide": {
-               "bottom": "-1rem"
-               }
-               }
-               }'>
-            <i class="bi-chevron-up"></i>
-        </a>
-
         {% block javascripts %}
-
-            <script src="{{ '/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js' }}"></script>
-            <script src="{{ '/assets/vendor/hs-header/dist/hs-header.min.js' }}"></script>
-            <script src="{{ '/assets/vendor/hs-go-to/dist/hs-go-to.min.js' }}"></script>
-            <script src="{{ '/assets/vendor/swiper/swiper-bundle.min.js' }}"></script>
-            <script src="{{ '/assets/js/theme.min.js' }}"></script>
 
         {% endblock %}
 
-        <script>
-            (function() {
-
-                // INITIALIZATION OF NAVBAR
-                // =======================================================
-                new HSHeader('#header').init()
-
-
-                // INITIALIZATION OF GO TO
-                // =======================================================
-                new HSGoTo('.js-go-to')
-
-                // INITIALIZATION OF SWIPER
-                // =======================================================
-                var slidesPerView = new Swiper('.js-swiper-slides-per-view', {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                    pagination: {
-                        el: '.js-swiper-slides-per-view-pagination',
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: '.js-swiper-slides-per-view-button-next',
-                        prevEl: '.js-swiper-slides-per-view-button-prev',
-                    },
-                });
-            })()
-        </script>
     </main>
-
 {% endblock %}
 </body>
 </html>
