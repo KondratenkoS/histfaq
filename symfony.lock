@@ -188,6 +188,9 @@
             "config/packages/uid.yaml"
         ]
     },
+    "symfony/ux-cropperjs": {
+        "version": "v2.13.2"
+    },
     "symfony/validator": {
         "version": "6.3",
         "recipe": {

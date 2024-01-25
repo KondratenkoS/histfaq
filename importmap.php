@@ -24,4 +24,7 @@ return [
     '@symfony/stimulus-bundle' => [
         'path' => '@symfony/stimulus-bundle/loader.js',
     ],
+    'cropperjs' => [
+        'url' => 'https://cdn.jsdelivr.net/npm/cropperjs@1.6.1/+esm',
+    ],
 ];
